@@ -801,7 +801,7 @@ i {
 
 /*** testimonial Start ***/
 .testimonial {
-    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-4.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1057,7 +1057,7 @@ i {
 
 /*** Contact Start ***/
 .contact {
-    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-4.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
