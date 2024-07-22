@@ -765,7 +765,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container-fluid blog py-5" id="instagram">
         <div class="container py-5">
             <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -777,70 +777,9 @@
                     sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam
                     necessitatibus saepe in ab? Repellat!</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Remove back Pain While Working on o physio</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Benefits of a weekly physiotherapy session</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Regular excercise can slow ageing process</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="instafeed"></div>
         </div>
-    </div>
-
-    <div id="instafeed"></div>
-
+    </div>    
 
     <div class="container-fluid copyright py-4" style="background-color: #5d2532;">
         <div class="container">
@@ -868,12 +807,30 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        var first = 'IGQWRNZADFfTVY5dzM4VWR1ZAkRXeVRld3ZADdlJPZAE5vZA3N3VjY4dU92aFJ1U2x5RmhKWm5ydTdUV'
+        var second = 'jRuRjVzVlI5QXo2T2Q1NC1Hd1RUSkloajJaSGVQZAGNmSnJFNDVWU1RHbDZAzMjNKSUFiVFBxdmVrLW1XdkpqRE0ZD'
         var feed = new Instafeed({
-            accessToken: 'IGQWRPdDhIX1EzOHpVSDdxcUM4RjJOOFEwaUpXVmV6aDl5WmZADTm9UM2pLeFpPY0ViYzVWMFk0MFN0OEtiQTVnZA3BoSVcwU05QUklIUmNpRGg5Ui1yVUVCbGFTVkpGcE92eWdLcV9BTERLd1N5enRMVDlwQXpVaUEZD',
+            accessToken: first + second,
             limit: 3,
-            template: '<div class="insta"><a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a></div>'
+            target: 'instafeed',
+            template: `
+            <div class="container-fluid blog py-5" id="instagram">
+                <a href="{{link}}" class="h4">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp collectionImg" data-wow-delay="0.1s">
+                    <div class="blog-item rounded">
+                        <div class="blog-img">
+                            <img src="{{image}}" class="img-fluid w-100" alt="Image">
+                        </div>
+                        <div class="blog-centent p-4">
+                            <a href="{{link}}" class="h4">{{caption}}</a>
+                            <p class="my-4">{{description}}</p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+            </div>
+            `
         });
-
 
         feed.run();
     </script>
