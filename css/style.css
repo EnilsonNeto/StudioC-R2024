@@ -14,6 +14,24 @@
     opacity: 1;
 }
 /*** Spinner End ***/
+#instafeed {
+    display: flex;
+    flex-wrap: inherit;
+}
+
+#instafeed .insta {
+    flex: 1 1 calc(33.333% - 1rem); /* Ajusta a largura das imagens e o espaçamento */
+    box-sizing: border-box;
+}
+
+#instafeed img {
+    border-radius: 0.5rem;
+    max-height: 800px; /* Adiciona bordas arredondadas, se desejado */
+}
+
+.collectionImg {
+    width: 100%;
+}
 
 .back-to-top {
     position: fixed;
@@ -801,7 +819,7 @@ i {
 
 /*** testimonial Start ***/
 .testimonial {
-    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-4.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -840,7 +858,7 @@ i {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    background: var(--bs-light);
+    background: #5d2532;
     color: var(--bs-primary);
     transition: 0.5s;
 }
@@ -857,8 +875,8 @@ i {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    background: var(--bs-light);
-    color: var(--bs-primary);
+    background: #5d2532;
+    color: #5d2532;
     transition: 0.5s;
 }
 
@@ -880,7 +898,10 @@ i {
         margin-top: -190px;
         margin-right: 40px;
     }
-    
+    #instafeed {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .testimonial-carousel .owl-dots {
@@ -1054,10 +1075,9 @@ i {
 }
 /*** Blog End ***/
 
-
 /*** Contact Start ***/
 .contact {
-    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(82, 7, 41, 0.9), rgba(82, 7, 41, 0.9)), url(../img/carousel-4.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
