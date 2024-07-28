@@ -861,6 +861,7 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
+    <div id="instafeed"></div>
 
     <!-- JavaScript Libraries -->
     <script type="text/javascript" src="JS/instafeed.min.js"></script>
@@ -875,13 +876,15 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        var acess = 'IGQWRPdDhIX1EzOHpVSDdxcUM4RjJOOFEwaUpXVmV6aDl5WmZADTm9UM2pLeFpPY0ViYzVWMFk0MFN0OEtiQTVnZA3BoSVcwU05QUklIUmN'
+        var token = 'pRGg5Ui1yVUVCbGFTVkpGcE92eWdLcV9BTERLd1N5enRMVDlwQXpVaUEZD'
         var feed = new Instafeed({
-            accessToken: 'IGQWRPdDhIX1EzOHpVSDdxcUM4RjJOOFEwaUpXVmV6aDl5WmZADTm9UM2pLeFpPY0ViYzVWMFk0MFN0OEtiQTVnZA3BoSVcwU05QUklIUmNpRGg5Ui1yVUVCbGFTVkpGcE92eWdLcV9BTERLd1N5enRMVDlwQXpVaUEZD',
+            accessToken: acess + token,
             limit: 3,
             template:'<div class="insta"><a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a></div>'
         });
 
-
+        console.log(feed);
         feed.run();
     </script>
 
